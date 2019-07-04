@@ -25,14 +25,25 @@ This is the problem formulation as stated in the paper and the correspononding p
 The text file containing the start and goal point has the format where the first line (X Y coordinates) determines the start point and second line (X Y coordinates) determines the goal point.
 
 ## The Program
-###Usage
-  Running bidrectional:
+
+### Usage
+  Running bidirectional:
 
 	python rrt.py world_obstacles.txt start_goal.txt -b
 
   Running single-direction:
 
 	python rrt.py world_obstacles.txt start_goal.txt
+
+### Output
+**Single Direction**:
+
+![alt text][]
+
+**Bidirectional**:
+
+![alt text][]
+
 
 ### Methods
 **collision_free(st,end)**
@@ -85,18 +96,21 @@ Both implicitly use collision detection to plot points
 **build_rrt(T, q, goal, n=5000)**
 
 	- Adds additional biases for the random points
-	- Creates a random point and checks if it is within a step size
-	of a tree node. If so, connects, else, calls extend
+	- Creates a random point and checks if it is within a step size of a tree node. If so, connects, else, calls extend
 	- Calls extend to advance the tree a single node
 	- If trapped, escapes by setting a random point elsewhere
 	- Plots new edges that are within free space
 	- returns all tree paths
 
 **extend(T, q)**
+
 	- finds nearest neighbor and returns a new state in direction of q (passed random point)
 	- only returns a value if advanced
 	- reach state handled in build_rrt
 
 
 [pr]: https://github.com/s-abdullah/RandomTreeExploration/blob/master/images/porb.png 
-[ps]: https://github.com/s-abdullah/RandomTreeExploration/blob/master/images/ps.png 
+[ps]: https://github.com/s-abdullah/RandomTreeExploration/blob/master/images/ps.png
+
+[b]: https://github.com/s-abdullah/RandomTreeExploration/blob/master/gifs/brrt.gif 
+[s]: https://github.com/s-abdullah/RandomTreeExploration/blob/master/gifs/rrt.gif
