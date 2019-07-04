@@ -38,11 +38,11 @@ The text file containing the start and goal point has the format where the first
 ### Output
 **Single Direction**:
 
-![alt text][]
+![alt text][s]
 
 **Bidirectional**:
 
-![alt text][]
+![alt text][b]
 
 
 ### Methods
