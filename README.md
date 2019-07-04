@@ -15,8 +15,10 @@ This is the problem formulation as stated in the paper and the correspononding p
 
 * first integer gives you the number of obstacles
 * for each obstacle:
-	** First integer gives the number of vertices
-	** The vertices follow as X Y pairs, one per line, each with two coordinates
+	
+	- First integer gives the number of vertices
+	
+	- The vertices follow as X Y pairs, one per line, each with two coordinates
 
 
 
